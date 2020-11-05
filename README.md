@@ -12,23 +12,36 @@ Service accepts the next URL parameters:
 
 ## Development
 
+The next software is required to run the app:
+
+- [Git](https://git-scm.com/)
+- [Node](https://nodejs.org/en/)
+
 1.  Clone the repository
 
 ```bash
 git clone git@github.com:v1690117/week-of-year.git
 ```
 
-2.  Install dependencies
+2. Go into cloned folder
+
+```bash
+cd week-of-year
+```
+
+3.  Install dependencies
 
 ```bash
 npm install
 ```
 
-3.  Run server
+4.  Run server
 
 ```bash
 npm run start
 ```
+
+5. Check in [http://localhost:3000/](http://localhost:3000/)
 
 ## Contribution
 
