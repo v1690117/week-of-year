@@ -1,8 +1,50 @@
-<style>
-.center {
-    width: 100%;
-    margin-left: auto;
-    margin-top: auto; 
-    font-size: #fontSize#
-}</style>
-<span class="center">#content#</span>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week of year</title>
+    <style>
+      body {
+        font-family: Helvetica;
+        font-weight: 300;
+      }
+
+      .modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .modal__content {
+        width: 100%;
+        height: 25vh;
+        padding: 20px;
+      }
+
+      .modal_result {
+        border-radius: 2px;
+        display: flex;
+        width: 100%;
+        height: 10vh;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 5vh;
+        font-size: #fontSize#;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal__content">
+        <div class="modal_result">#content#</div>
+      </div>
+    </div>
+  </body>
+</html>
