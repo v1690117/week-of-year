@@ -1,6 +1,7 @@
 # Week of the year
 
-Service showing current week of the year.
+Service showing current week of the year.  
+It is published here [week-of-year](https://v1690117.com/week-of-year/?prefix=Current%20week%20is%20&postfix=!&fontSize=6vw).
 
 # Configuration
 
