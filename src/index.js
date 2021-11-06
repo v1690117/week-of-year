@@ -1,6 +1,20 @@
 const express = require("express");
-const currentWeekNumber = require("current-week-number");
+const calcWeekNumber = require("current-week-number");
 const fs = require("fs");
+
+const getNumber = (params) => {
+  const { mode = "current" } = params;
+  switch (mode) {
+    case "current":
+      return calcWeekNumber();
+    case "countdown":
+      const { targetDate } = params;
+      const targetWeek = calcWeekNumber(targetDate);
+      return targetWeek - calcWeekNumber();
+    default:
+      return "unsupported mode!";
+  }
+};
 
 const app = express();
 const port = 3000;
@@ -20,8 +34,8 @@ app.set("view engine", "ntl");
 app.get("/", (req, res) => {
   const { prefix = "", postfix = "", fontSize = "3rem" } = req.query;
   res.render("index", {
-    content: `${prefix}${currentWeekNumber()}${postfix}`,
-    fontSize
+    content: `${prefix}${getNumber(req.query)}${postfix}`,
+    fontSize,
   });
 });
 
