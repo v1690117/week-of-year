@@ -1,3 +1,4 @@
+# to build image>> docker build . -t v1690117/week-of-year
 FROM node:12
 
 WORKDIR /usr/src/app

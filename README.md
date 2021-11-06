@@ -7,9 +7,13 @@ It is published here [week-of-year](https://v1690117.com/week-of-year/?prefix=Cu
 
 Service accepts the next URL parameters:
 
-- prefix - text to be shown in front of the week number
-- postfix - text to be shown behind the week number
-- fontSize - size of the text in css format, `3rem` is default value.
+- prefix (optional) - text to be shown in front of the week number
+- postfix (optional)- text to be shown behind the week number
+- fontSize (optional) - size of the text in css format, `3rem` is default value.
+- mode (optional):
+  - current (**default**) - 
+  - countdown - number of weeks to defined date (with param targetDate)
+- targetDate (optional) - date to build countdown
 
 ## Development
 
@@ -43,6 +47,17 @@ npm run start
 ```
 
 5. Check in [http://localhost:3000/](http://localhost:3000/)
+
+## Docker
+To build image run
+```bash
+docker build . -t v1690117/week-of-year
+```
+
+To run container
+```bash
+docker run -d -p 3000:3000 v1690117/week-of-year
+```
 
 ## Contribution
 
